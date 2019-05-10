@@ -52,6 +52,7 @@
   },
   "dependencies": {
     "@material-ui/core": "^3.9.3",
+    "@material-ui/icons": "^3.0.2",
     "classnames": "^2.2.5",
     "css-declaration-sorter": "^2.0.0",
     "css-mqpacker": "^6.0.1",

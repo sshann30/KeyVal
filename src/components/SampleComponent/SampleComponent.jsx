@@ -6,52 +6,80 @@ import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import Fab from '@material-ui/core/Fab';
-import AddIcon from '@material-ui/icons/add';
+import AddIcon from '@material-ui/icons/Add';
 import Icon from '@material-ui/core/Icon';
 import DeleteIcon from '@material-ui/icons/Delete';
 import NavigationIcon from '@material-ui/icons/Navigation';
+import IconButton from '@material-ui/core/IconButton';
+import List from '@material-ui/core/List';
+import ListItem from '@material-ui/core/ListItem';
+import ListItemText from '@material-ui/core/ListItemText';
+import Divider from '@material-ui/core/Divider';
+import MenuItem from '@material-ui/core/MenuItem';
+import TextField from '@material-ui/core/TextField';
 
 function SimpleAppBar(props) {
   const { classes } = props;
 
   return (
+
     <div style={{ display: "flex" }}>
+
       <div style={{ width: "auto", margin: "auto" }}>
+
+        <br></br>
 
         <div className={classes.root}>
 
           <AppBar position="static" color="default">
             <Toolbar>
               <Typography variant="h6" color="inherit">
-                this is the parent component
+                This is the parent component
           </Typography>
             </Toolbar>
           </AppBar>
-          <AppBar position="static" color="default">
-            <Toolbar>
-              <Typography variant="h6" color="inherit">
-                this is the your header
-              </Typography>
-              <tr></tr>
-              <div>
-                <Fab color="primary" aria-label="add" className={classes.fab}>
-                  <AddIcon />
-                </Fab>
-                <Fab color="secondary" aria-label="Edit" className={classes.fab}>
-                  <Icon>edit_icon</Icon>
-                </Fab>
-                <Fab variant="extended" aria-label="Delete" className={classes.fab}>
-                  <NavigationIcon className={classes.extendedIcon} />
-                  Extended
-                </Fab>
-                <Fab disabled aria-label="Delete" className={classes.fab}>
-                  <DeleteIcon />
-                </Fab>
-              </div>
-            </Toolbar>
-          </AppBar>
+
+
+          <List component="nav" className={classes.root}>
+            <ListItem button>
+              <ListItemText primary="This is your header" />
+              <Fab size="small" color="secondary" aria-label="Add" className={classes.margin}>
+                <AddIcon />
+              </Fab>
+            </ListItem>
+            <Divider />
+
+            <ListItem button divider>
+              <TextField
+                id="standard-key-input"
+                label="Key"
+                className={classes.textField}
+                type="key"
+                autoComplete="current-key"
+                margin="normal"
+              />
+
+              &nbsp;
+              
+              <TextField
+                id="standard-value-input"
+                label="Value"
+                className={classes.textField}
+                type="value"
+                autoComplete="current-value"
+                margin="normal"
+              />
+              <IconButton aria-label="Delete" className={classes.margin}>
+                <DeleteIcon />
+              </IconButton>
+
+            </ListItem>
+
+          </List>
+
         </div>
       </div>
+
     </div>
   );
 }
