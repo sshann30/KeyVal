@@ -17,6 +17,7 @@ import ListItemText from '@material-ui/core/ListItemText';
 import Divider from '@material-ui/core/Divider';
 import MenuItem from '@material-ui/core/MenuItem';
 import TextField from '@material-ui/core/TextField';
+import Button from '@material-ui/core/Button';
 
 function SimpleAppBar(props) {
   const { classes } = props;
@@ -60,7 +61,7 @@ function SimpleAppBar(props) {
               />
 
               &nbsp;
-              
+
               <TextField
                 id="standard-value-input"
                 label="Value"
@@ -72,9 +73,16 @@ function SimpleAppBar(props) {
               <IconButton aria-label="Delete" className={classes.margin}>
                 <DeleteIcon />
               </IconButton>
-
             </ListItem>
 
+            <ListItem style={{justifyContent: 'center'}}>
+              <Fab variant="extended" color="primary" aria-label="Add" className={classes.margin}>
+                <NavigationIcon className={classes.extendedIcon} />
+                Submit
+              </Fab>
+            </ListItem>
+
+            <Divider />
           </List>
 
         </div>
