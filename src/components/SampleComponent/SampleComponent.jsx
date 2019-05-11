@@ -24,7 +24,7 @@ function SimpleAppBar(props) {
 
   return (
 
-    <div style={{ display: "flex" }}>
+    <div style={{ display: "block" }}>
 
       <div style={{ width: "auto", margin: "auto" }}>
 
@@ -35,16 +35,17 @@ function SimpleAppBar(props) {
           <AppBar position="static" color="default">
             <Toolbar>
               <Typography variant="h6" color="inherit">
-                This is the parent component
+                Material UI Shopping List
           </Typography>
             </Toolbar>
           </AppBar>
 
 
-          <List component="nav" className={classes.root}>
+          <List component="nav" className={classes.root} >
             <ListItem button>
-              <ListItemText primary="This is your header" />
+              <ListItemText primary="Add an item to the list" />
               <Fab size="small" color="secondary" aria-label="Add" className={classes.margin}>
+              
                 <AddIcon />
               </Fab>
             </ListItem>
@@ -53,7 +54,7 @@ function SimpleAppBar(props) {
             <ListItem button divider>
               <TextField
                 id="standard-key-input"
-                label="Key"
+                label="Item"
                 className={classes.textField}
                 type="key"
                 autoComplete="current-key"
@@ -64,7 +65,7 @@ function SimpleAppBar(props) {
 
               <TextField
                 id="standard-value-input"
-                label="Value"
+                label="Price"
                 className={classes.textField}
                 type="value"
                 autoComplete="current-value"
@@ -81,6 +82,13 @@ function SimpleAppBar(props) {
                 Submit
               </Fab>
             </ListItem>
+            <AppBar position="static" color="default">
+            <Toolbar>
+              <Typography variant="h6" color="inherit">
+                Click submit to see 
+          </Typography>
+            </Toolbar>
+          </AppBar>
 
             <Divider />
           </List>
