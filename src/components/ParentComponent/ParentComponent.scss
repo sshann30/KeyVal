@@ -1,0 +1,71 @@
+@import 'src/assets/styles/base/baseExport';
+
+.parentComp {
+  margin-top: 30px;
+  display: block;
+  width: 80%;
+  margin: 0 auto;
+
+  p {
+    color: white;
+    margin-right: 5px;
+    padding-top: 10px;
+    margin-left: 20px;
+    font-size: 12px;
+    font-weight: 600;
+    font-family: roboto;
+    display: inline-block;
+  }
+}
+
+.header {
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  width: 100%;
+  display: block;
+  height: 30px;
+  background: #5DA8E4;
+}
+
+// .form {
+//   width: 100%;
+//   padding: 5px;
+//   background: #505256;
+//   border-bottom-left-radius: 3px;
+//   border-bottom-right-radius: 3px;
+
+//   .header_info {
+//     margin-left: 15px;
+//   }
+// }
+
+.sub_btn {
+  padding: 3px;
+  display: block;
+  margin: 5px auto;
+  width: 95%;
+  color: white;
+  border-radius: 3px;
+  background: #5DA8E4;
+  border: none;
+}
+
+.add_btn {
+  padding: 0;
+  width: 20px;
+  text-align: center;
+  height: 20px;
+  background: white;
+  border-radius: 3px;
+}
+
+.add_btn:focus, .sub_btn:focus {
+  outline:0;
+}
+
+@media screen and (max-width: 400px) {
+  .sub_btn {
+    width: 90%;
+    margin-top: 20px;
+  }
+}
